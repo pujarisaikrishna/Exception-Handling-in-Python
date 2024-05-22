@@ -1,0 +1,72 @@
+#Exception handling Built-In Exceptions
+
+#Zero Division Error
+n1 = int(input('enter the number - 1 '))
+n2 = int(input('enter the number - 2 '))
+#we have to handle the exception
+try:
+    res = n1 / n2          #Zero Division Error will occur
+    print(res)
+except ZeroDivisionError:
+    print('you cant divide zero with any number')
+print('---------------------------------------')
+
+
+#Value Error
+try:
+   a = int(input('enter the number - 1 '))
+   b = int(input('enter the number - 2 '))
+#we have to handle the exception
+
+   res = a/b                #Value Error will occur
+   print(res)
+except ValueError:
+    print('you cant add string with number')
+print('---------------------------------------')
+
+
+#Index Error
+try:
+   mylist = [10,20,30,40,50]
+   print(mylist[1])
+except IndexError:
+    print('Check your Index Number')
+else:
+    print('Program Successfully Executed')
+finally:
+    print('I always executes')
+print('---------------------------------------')
+
+-------------------------------------------------------------------------------------------------
+
+#How to Print exception Message 
+#Zero Division Error
+n1 = int(input('enter the number - 1 '))
+n2 = int(input('enter the number - 2 '))
+#we have to handle the exception
+try:
+    res = n1 / n2          #Zero Division Error will occur
+    print(res)
+except ZeroDivisionError as obj:
+    print(obj)
+print('---------------------------------------')
+
+#Value Error
+try:
+   a = int(input('enter the number - 1 '))
+   b = int(input('enter the number - 2 '))
+#we have to handle the exception
+
+   res = a/b                #Value Error will occur
+   print(res)
+except ValueError as obj:
+    print(obj)
+print('---------------------------------------')
+
+#Index Error
+try:
+   mylist = [10,20,30,40,50]
+   print(mylist[6])
+except IndexError as obj:
+    print(obj)
+
